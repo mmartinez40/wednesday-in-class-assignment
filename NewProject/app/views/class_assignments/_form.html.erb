@@ -1,0 +1,32 @@
+<%= form_with(model: class_assignment, local: true) do |form| %>
+  <% if class_assignment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(class_assignment.errors.count, "error") %> prohibited this class_assignment from being saved:</h2>
+
+      <ul>
+        <% class_assignment.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.text_field :course %>
+  </div>
+
+  <div class="field">
+    <%= form.label :room_number %>
+    <%= form.text_field :room_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Professor_id %>
+    <%= form.text_field :Professor_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
