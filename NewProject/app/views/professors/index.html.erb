@@ -17,8 +17,8 @@
     <% @professors.each do |professor| %>
       <tr>
         <td><%= professor.name %></td>
-        <td><%= professor.class %></td>
-        <td><%= professor.string %></td>
+        <td><%= professor.course %></td>
+        
         <td><%= professor.office %></td>
         <td><%= link_to 'Show', professor %></td>
         <td><%= link_to 'Edit', edit_professor_path(professor) %></td>
